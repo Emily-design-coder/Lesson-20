@@ -4,31 +4,19 @@
         <title>My page</title>
     </head>
     <body>
-        <button onclick="func(2,6)">Calculate</button>
+        <button onclick="func(2)">Calculate</button>
+        <p id="result"></p>
         <script>
-            function func(x,y) {
-                if (x === undefined) {
-                    x = 7;
-                }
-                document.write(x + y * x)
+            function func(x,y)
+            {
+                if (y === undefined) 
+               {
+                alert ("The value of y is undefined");
+                y = 8;
+               }
+               var result = x * y - x;
+               document.getElementById("result").innerHTML = result;
             }
-            document.getElementById("demo1").innerHTML = b;
-            document.getElementById("demo2").innerHTML = a;
-            </script>
-
-            <button type="button" onclick="Myfunc()">Click Me!</button>
-            <p id="demo"></p>
-            <p id="demo1"></p>
-            <p id="demo2"></p>
-            <script>
-                var b = 5; //global variable
-                function Myfunc() {
-                    var a = 2; //local variable
-                    document.getElementById("demo").innerHTML = b * a - b;
-                }
-                document.getElementById("demo1").innerHTML = b;
-                document.getElementById("demo2").innerHTML = a;
-            </script>
-            
-            </body>
+        </script>
+    </body>
 </html>
